@@ -7,9 +7,11 @@ export const ApplicationCard = ({ application }) => {
       <Card.Header>
         <HStack justifyContent="space-between" alignItems="flex-start">
           <Heading size="md"> {application.appModuleName}</Heading>
-          <Badge size="md" colorPalette="green">
-            {application.appModuleVersion}
-          </Badge>
+          {application.appModuleVersion && (
+            <Badge size="md" colorPalette="green">
+              {application.appModuleVersion}
+            </Badge>
+          )}
         </HStack>
       </Card.Header>
       <Card.Body color="fg.muted">{application.appModuleDescription}</Card.Body>

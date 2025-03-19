@@ -11,7 +11,7 @@ export const MOCK_NOTEBOOKS = [
     "tags": ["science", "molecular", "framework"],
     "date": "2021-01-01",
     "images": {
-      "headerImage": "https://scitechdaily.com/images/Artistic-Molecular-Structure.jpg",
+      "headerImage": "https://scitechdaily.com/images/Artistic-Molecular-Structure.jpg"
     },
     "notebookViewer": "https://jupyter.org/try-jupyter/lab/"
   },
@@ -27,7 +27,7 @@ export const MOCK_NOTEBOOKS = [
     "tags": ["science", "molecular", "machine learning"],
     "date": "2021-01-02",
     "images": {
-      "headerImage": "https://scitechdaily.com/images/Artistic-Molecular-Structure.jpg",
+      "headerImage": "https://scitechdaily.com/images/Artistic-Molecular-Structure.jpg"
     },
     "notebookViewer": "https://jupyter.org/try-jupyter/lab/"
   },
@@ -43,11 +43,12 @@ export const MOCK_NOTEBOOKS = [
     "tags": ["science", "molecular", "future"],
     "date": "2021-01-03",
     "images": {
-      "headerImage": "https://scitechdaily.com/images/Artistic-Molecular-Structure.jpg",
+      "headerImage": "https://scitechdaily.com/images/Artistic-Molecular-Structure.jpg"
     },
     "notebookViewer": "https://jupyter.org/try-jupyter/lab/"
-  }
+  },
 ];
+
 
 export const MOCK_REPOSITORIES = [
   {

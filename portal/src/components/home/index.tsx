@@ -1,78 +1,35 @@
-import {
-  Box,
-  Input,
-  Heading,
-  Text,
-  VStack,
-  HStack,
-  Icon,
-  Container,
-} from "@chakra-ui/react";
+import { Box, Input, HStack, Icon, Container, Button } from "@chakra-ui/react";
 
 import NavBar from "../NavBar";
 import { InputGroup } from "../ui/input-group";
 import { LuSearch } from "react-icons/lu";
-import { FaMap, FaProjectDiagram, FaSearch } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
+import { PageHeader } from "../PageHeader";
+import { AddRepositoryButton } from "./AddRepositoryButton";
+import { AddZipButton } from "./AddZipButton";
 
 const Home = () => {
   return (
     <Box>
       <NavBar />
 
-      <Container maxW="container.xl">
-        <Box textAlign="center" p={10} minH="100vh">
-          <Heading as="h1" size="5xl" fontWeight="black" color="#f58b7d">
-            Apache{" "}
-            <Text as="span" color="#2bb8df">
-              Airavata
-            </Text>{" "}
-          </Heading>
-          <Text mt={2} color="gray.600">
-            Empowering Science with Distributed Computing and Data Management
-          </Text>
+      <Container maxW="container.xl" mt={8}>
+        <HStack alignItems="flex-end" justify="space-between">
+          <PageHeader
+            title="Notebooks"
+            description="Community-Published Scientific Notebooks and Repositories."
+          />
 
-          <InputGroup
-            mt={12}
-            mx="auto"
-            borderRadius="md"
-            w="70%"
-            bg="white"
-            boxShadow="md"
-            endElement={<LuSearch />}
-          >
-            <Input
-              type="text"
-              placeholder="Start your exploration..."
-              borderRadius="md"
-            />
-          </InputGroup>
+          <HStack gap={4}>
+            <AddZipButton />
 
-          <HStack mt={10} gap={24} justify="center">
-            <VStack>
-              <Icon as={FaMap} w={10} h={10} color="blue.400" />
-              <Text fontWeight="bold">Map</Text>
-              <Text fontSize="sm" color="gray.500">
-                Transform data into insights
-              </Text>
-            </VStack>
-
-            <VStack>
-              <Icon as={FaProjectDiagram} w={10} h={10} color="green.400" />
-              <Text fontWeight="bold">Connect</Text>
-              <Text fontSize="sm" color="gray.500">
-                Understand linked knowledge
-              </Text>
-            </VStack>
-
-            <VStack>
-              <Icon as={FaSearch} w={10} h={10} color="purple.400" />
-              <Text fontWeight="bold">Discover</Text>
-              <Text fontSize="sm" color="gray.500">
-                Explore new knowledge intelligently
-              </Text>
-            </VStack>
+            <AddRepositoryButton />
           </HStack>
-        </Box>
+        </HStack>
+
+        <InputGroup mt={4} endElement={<LuSearch />} w="100%">
+          <Input placeholder="Search" rounded="md" />
+        </InputGroup>
       </Container>
     </Box>
   );

@@ -1,4 +1,4 @@
-import { HStack, Text, Heading, Icon } from "@chakra-ui/react";
+import { Box, HStack, Text, Heading, Icon } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 export const PageHeader = ({
@@ -7,14 +7,14 @@ export const PageHeader = ({
   description,
 }: {
   title: string;
-  icon: ReactNode;
+  icon?: ReactNode;
   description: string;
 }) => {
   const fontSize = "5xl";
   return (
-    <>
+    <Box>
       <HStack alignItems="center" gap={4}>
-        <Icon fontSize={fontSize}>{icon}</Icon>
+        {icon && <Icon as={icon} fontSize={fontSize} />}
         <Heading as="h1" size={fontSize}>
           {title}
         </Heading>
@@ -23,6 +23,6 @@ export const PageHeader = ({
       <Text color="gray.600" mt={4}>
         {description}
       </Text>
-    </>
+    </Box>
   );
 };
