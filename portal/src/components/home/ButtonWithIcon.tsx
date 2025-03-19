@@ -13,8 +13,8 @@ export const ButtonWithIcon = ({
 }: ButtonWithIconProps) => {
   return (
     <Button {...rest}>
-      <Icon size="sm">
-        <UserIcon />
+      <Icon size="xs">
+        <UserIcon fontWeight="solid" />
       </Icon>
       {children}
     </Button>

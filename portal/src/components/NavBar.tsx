@@ -16,9 +16,19 @@ const NAV_CONTENT = [
     url: "/models",
   },
 ];
+
 const NavBar = () => {
   return (
-    <Flex as="nav" align="center" p={4} boxShadow="sm">
+    <Flex
+      as="nav"
+      align="center"
+      p={4}
+      boxShadow="sm"
+      position="sticky"
+      top="0"
+      zIndex="1000"
+      bg="white" // Ensure background is not transparent
+    >
       {/* Logo */}
       <Link to="/">
         <Image src={ApacheAiravataLogo} alt="Logo" boxSize="30px" />
@@ -45,5 +55,4 @@ const NavBar = () => {
     </Flex>
   );
 };
-
 export default NavBar;

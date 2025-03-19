@@ -98,7 +98,7 @@ export const AddZipButton = () => {
                   mt={4}
                   disabled={fileUpload.acceptedFiles.length === 0}
                 >
-                  Add Git Repository
+                  Add Zip File
                 </Button>
               </Dialog.Body>
               <Dialog.CloseTrigger asChild>

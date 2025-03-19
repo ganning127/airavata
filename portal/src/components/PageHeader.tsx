@@ -10,7 +10,7 @@ export const PageHeader = ({
   icon?: ReactNode;
   description: string;
 }) => {
-  const fontSize = "5xl";
+  const fontSize = "4xl";
   return (
     <Box>
       <HStack alignItems="center" gap={4}>
@@ -20,7 +20,7 @@ export const PageHeader = ({
         </Heading>
       </HStack>
 
-      <Text color="gray.600" mt={4}>
+      <Text color="gray.600" mt={2}>
         {description}
       </Text>
     </Box>
